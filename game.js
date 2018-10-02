@@ -7,6 +7,8 @@ var p1Display = document.querySelector("#p1");
 var p2Button = document.querySelector("#player2");
 var p2Display = document.querySelector("#p2");
 var reset = document.querySelector("#reset")
+var numInput = document.querySelector("input")
+var p = document.querySelector("#upTo")
 var p1Score = 0;
 var p2Score = 0;
 var gameOver = false;
@@ -45,4 +47,11 @@ reset.addEventListener("click", function(){
   p2Display.style.color = "black"
 
   gameOver = false
+})
+
+numInput.addEventListener("change", function(){
+  // change the winningPoint
+  winningPoint = Number(numInput.value)
+  // change the words
+  p.textContent = winningPoint
 })
